@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "ServerRequest.h"
+#import "UIViewController+AMSlideMenu.h"
+#import "TracksTableViewController.h"
 
 @interface PlayerViewController : UIViewController
-- (NSArray*) findTracks:(NSString *)name fromArtist:(NSString*) artist;
-- (void) addTrack:(NSDictionary*) track;
-- (IBAction)playTest:(id)sender;
-- (void) handleError:(NSError*) error;
+@property (weak, nonatomic) IBOutlet UITextField *artistField;
+@property (weak, nonatomic) IBOutlet UITextField *songField;
 @end

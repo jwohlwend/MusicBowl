@@ -78,6 +78,7 @@
     manager.completionQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     [manager POST:self.url parameters:self.parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.response = (NSDictionary *)responseObject[@"result"];
+        NSLog(@"%@", responseObject);
         dispatch_semaphore_signal(self.semaphore);
     } failure:^(AFHTTPRequestOperation *operation, NSError*requestError) {
         self.error = requestError;

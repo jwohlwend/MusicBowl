@@ -11,12 +11,12 @@
 
 @interface ServerRequest : NSObject
 {
-    NSString* type;
-    NSString* url;
-    NSError* error;
-    NSDictionary* response;
-    NSMutableDictionary* parameters;
-    dispatch_semaphore_t semaphore;
+    @private NSString* type;
+    @private NSString* url;
+    @private NSError* error;
+    @private NSDictionary* response;
+    @private NSMutableDictionary* parameters;
+    @private dispatch_semaphore_t semaphore;
 }
 
 - (NSString*) type;

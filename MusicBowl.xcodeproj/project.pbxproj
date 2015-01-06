@@ -26,6 +26,17 @@
 		3F37D3021A59A24A00ABA169 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D2F81A59A24A00ABA169 /* AFURLResponseSerialization.m */; };
 		3F37D3031A59A24A00ABA169 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D2FA1A59A24A00ABA169 /* AFURLSessionManager.m */; };
 		3F37D3061A59A27500ABA169 /* ServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3051A59A27500ABA169 /* ServerRequest.m */; };
+		3F37D3091A5B278B00ABA169 /* TracksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3081A5B278B00ABA169 /* TracksTableViewController.m */; };
+		3F37D31A1A5B29A000ABA169 /* AMSlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D30C1A5B29A000ABA169 /* AMSlideMenuContentSegue.m */; };
+		3F37D31B1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D30E1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.m */; };
+		3F37D31C1A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3101A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.m */; };
+		3F37D31D1A5B29A000ABA169 /* AMSlideMenuMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3121A5B29A000ABA169 /* AMSlideMenuMainViewController.m */; };
+		3F37D31E1A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3151A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.m */; };
+		3F37D31F1A5B29A000ABA169 /* AMSlideMenuRightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3171A5B29A000ABA169 /* AMSlideMenuRightTableViewController.m */; };
+		3F37D3201A5B29A000ABA169 /* UIViewController+AMSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3191A5B29A000ABA169 /* UIViewController+AMSlideMenu.m */; };
+		3F37D3261A5B2B5F00ABA169 /* LeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3251A5B2B5F00ABA169 /* LeftMenuTableViewController.m */; };
+		3F37D3291A5B32DA00ABA169 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3281A5B32DA00ABA169 /* MainVC.m */; };
+		3F37D32C1A5B60DC00ABA169 /* QueueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D32B1A5B60DC00ABA169 /* QueueTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +86,29 @@
 		3F37D2FA1A59A24A00ABA169 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		3F37D3041A59A27500ABA169 /* ServerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerRequest.h; path = MusicBowl/ServerRequest.h; sourceTree = SOURCE_ROOT; };
 		3F37D3051A59A27500ABA169 /* ServerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerRequest.m; path = MusicBowl/ServerRequest.m; sourceTree = SOURCE_ROOT; };
+		3F37D3071A5B278B00ABA169 /* TracksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TracksTableViewController.h; sourceTree = "<group>"; };
+		3F37D3081A5B278B00ABA169 /* TracksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TracksTableViewController.m; sourceTree = "<group>"; };
+		3F37D30B1A5B29A000ABA169 /* AMSlideMenuContentSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuContentSegue.h; sourceTree = "<group>"; };
+		3F37D30C1A5B29A000ABA169 /* AMSlideMenuContentSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuContentSegue.m; sourceTree = "<group>"; };
+		3F37D30D1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuLeftMenuSegue.h; sourceTree = "<group>"; };
+		3F37D30E1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuLeftMenuSegue.m; sourceTree = "<group>"; };
+		3F37D30F1A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuLeftTableViewController.h; sourceTree = "<group>"; };
+		3F37D3101A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuLeftTableViewController.m; sourceTree = "<group>"; };
+		3F37D3111A5B29A000ABA169 /* AMSlideMenuMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuMainViewController.h; sourceTree = "<group>"; };
+		3F37D3121A5B29A000ABA169 /* AMSlideMenuMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuMainViewController.m; sourceTree = "<group>"; };
+		3F37D3131A5B29A000ABA169 /* AMSlideMenuProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuProtocols.h; sourceTree = "<group>"; };
+		3F37D3141A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuRightMenuSegue.h; sourceTree = "<group>"; };
+		3F37D3151A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuRightMenuSegue.m; sourceTree = "<group>"; };
+		3F37D3161A5B29A000ABA169 /* AMSlideMenuRightTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuRightTableViewController.h; sourceTree = "<group>"; };
+		3F37D3171A5B29A000ABA169 /* AMSlideMenuRightTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuRightTableViewController.m; sourceTree = "<group>"; };
+		3F37D3181A5B29A000ABA169 /* UIViewController+AMSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AMSlideMenu.h"; sourceTree = "<group>"; };
+		3F37D3191A5B29A000ABA169 /* UIViewController+AMSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AMSlideMenu.m"; sourceTree = "<group>"; };
+		3F37D3241A5B2B5F00ABA169 /* LeftMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuTableViewController.h; sourceTree = "<group>"; };
+		3F37D3251A5B2B5F00ABA169 /* LeftMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuTableViewController.m; sourceTree = "<group>"; };
+		3F37D3271A5B32DA00ABA169 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
+		3F37D3281A5B32DA00ABA169 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
+		3F37D32A1A5B60DC00ABA169 /* QueueTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueTableViewController.h; sourceTree = "<group>"; };
+		3F37D32B1A5B60DC00ABA169 /* QueueTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +152,17 @@
 		3F37D2B31A59924D00ABA169 /* MusicBowl */ = {
 			isa = PBXGroup;
 			children = (
+				3F37D3271A5B32DA00ABA169 /* MainVC.h */,
+				3F37D3281A5B32DA00ABA169 /* MainVC.m */,
 				3F37D2B81A59924D00ABA169 /* AppDelegate.h */,
 				3F37D2B91A59924D00ABA169 /* AppDelegate.m */,
 				3F37D2BE1A59924D00ABA169 /* Main.storyboard */,
+				3F37D3241A5B2B5F00ABA169 /* LeftMenuTableViewController.h */,
+				3F37D3251A5B2B5F00ABA169 /* LeftMenuTableViewController.m */,
+				3F37D3071A5B278B00ABA169 /* TracksTableViewController.h */,
+				3F37D3081A5B278B00ABA169 /* TracksTableViewController.m */,
+				3F37D32A1A5B60DC00ABA169 /* QueueTableViewController.h */,
+				3F37D32B1A5B60DC00ABA169 /* QueueTableViewController.m */,
 				3F37D2DF1A599CCA00ABA169 /* PlayerViewController.h */,
 				3F37D2E01A599CCA00ABA169 /* PlayerViewController.m */,
 				3F37D3041A59A27500ABA169 /* ServerRequest.h */,
@@ -164,6 +206,7 @@
 		3F37D2E61A59A24A00ABA169 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				3F37D30A1A5B29A000ABA169 /* AMSlideMenu */,
 				3F37D2E71A59A24A00ABA169 /* AFNetworking */,
 			);
 			path = API;
@@ -193,6 +236,28 @@
 				3F37D2FA1A59A24A00ABA169 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		3F37D30A1A5B29A000ABA169 /* AMSlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				3F37D30B1A5B29A000ABA169 /* AMSlideMenuContentSegue.h */,
+				3F37D30C1A5B29A000ABA169 /* AMSlideMenuContentSegue.m */,
+				3F37D30D1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.h */,
+				3F37D30E1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.m */,
+				3F37D30F1A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.h */,
+				3F37D3101A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.m */,
+				3F37D3111A5B29A000ABA169 /* AMSlideMenuMainViewController.h */,
+				3F37D3121A5B29A000ABA169 /* AMSlideMenuMainViewController.m */,
+				3F37D3131A5B29A000ABA169 /* AMSlideMenuProtocols.h */,
+				3F37D3141A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.h */,
+				3F37D3151A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.m */,
+				3F37D3161A5B29A000ABA169 /* AMSlideMenuRightTableViewController.h */,
+				3F37D3171A5B29A000ABA169 /* AMSlideMenuRightTableViewController.m */,
+				3F37D3181A5B29A000ABA169 /* UIViewController+AMSlideMenu.h */,
+				3F37D3191A5B29A000ABA169 /* UIViewController+AMSlideMenu.m */,
+			);
+			path = AMSlideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,19 +360,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F37D31A1A5B29A000ABA169 /* AMSlideMenuContentSegue.m in Sources */,
 				3F37D2FB1A59A24A00ABA169 /* AFHTTPRequestOperation.m in Sources */,
+				3F37D31B1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				3F37D2BA1A59924D00ABA169 /* AppDelegate.m in Sources */,
 				3F37D2FC1A59A24A00ABA169 /* AFHTTPRequestOperationManager.m in Sources */,
+				3F37D3091A5B278B00ABA169 /* TracksTableViewController.m in Sources */,
 				3F37D2FE1A59A24A00ABA169 /* AFNetworkReachabilityManager.m in Sources */,
+				3F37D31C1A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.m in Sources */,
 				3F37D3061A59A27500ABA169 /* ServerRequest.m in Sources */,
+				3F37D32C1A5B60DC00ABA169 /* QueueTableViewController.m in Sources */,
+				3F37D3201A5B29A000ABA169 /* UIViewController+AMSlideMenu.m in Sources */,
 				3F37D3021A59A24A00ABA169 /* AFURLResponseSerialization.m in Sources */,
 				3F37D3001A59A24A00ABA169 /* AFURLConnectionOperation.m in Sources */,
 				3F37D2FF1A59A24A00ABA169 /* AFSecurityPolicy.m in Sources */,
 				3F37D2FD1A59A24A00ABA169 /* AFHTTPSessionManager.m in Sources */,
+				3F37D31F1A5B29A000ABA169 /* AMSlideMenuRightTableViewController.m in Sources */,
 				3F37D3011A59A24A00ABA169 /* AFURLRequestSerialization.m in Sources */,
 				3F37D3031A59A24A00ABA169 /* AFURLSessionManager.m in Sources */,
 				3F37D2B71A59924D00ABA169 /* main.m in Sources */,
+				3F37D31D1A5B29A000ABA169 /* AMSlideMenuMainViewController.m in Sources */,
 				3F37D2E11A599CCA00ABA169 /* PlayerViewController.m in Sources */,
+				3F37D3291A5B32DA00ABA169 /* MainVC.m in Sources */,
+				3F37D31E1A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.m in Sources */,
+				3F37D3261A5B2B5F00ABA169 /* LeftMenuTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
