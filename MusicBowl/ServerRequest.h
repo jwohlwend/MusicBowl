@@ -37,5 +37,6 @@
 - (void) synchronize;
 - (NSError*) getError;
 - (NSDictionary*) getResponse;
+- (void) handleError:(NSError*) error withVC:(id) vc;
 
 @end

@@ -14,6 +14,38 @@
 
 @implementation MainVC
 
+- (BOOL) isPlaying{
+    return isPlaying;
+}
+
+- (BOOL) isPaused{
+    return isPaused;
+}
+
+- (BOOL) isStopped{
+    return isStopped;
+}
+
+- (void) setIsPlaying:(BOOL) playing{
+    isPlaying = playing;
+}
+- (void) setIsPaused:(BOOL) paused{
+    isPaused = paused;
+}
+- (void) setIsStopped:(BOOL) stopped{
+    isStopped = stopped;
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self){
+        self.isPlaying = NO;
+        self.isPaused = NO;
+        self.isStopped = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     ServerRequest* request = [[ServerRequest alloc] initWithType:@"core.tracklist.set_consume"];

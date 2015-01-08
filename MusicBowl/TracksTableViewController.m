@@ -23,6 +23,12 @@
 - (NSArray*) results{
     return results;
 }
+- (NSString*) source{
+    return source;
+}
+- (void) setSource: (NSString*) theSource{
+    source = theSource;
+}
 - (void) setSong: (NSString*)songName{
     song = songName;
 }
@@ -44,9 +50,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.source = @"spotify";
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    
+    _segmentedControl = [[RS3DSegmentedControl alloc] initWithFrame:CGRectMake(0, _tableView.frame.origin.y + 15, self.view.frame.size.width, 40)];
+    _segmentedControl.delegate = self;
+    [self.view addSubview:_segmentedControl];
+    
     
     // Uncomment the following line to preserve selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
     self.results = [self findTracks:self.song fromArtist:self.artist];
     [self.tableView reloadData];
     
@@ -55,29 +68,42 @@
 }
 
 - (void) play: (NSDictionary*) track{
-    ServerRequest* request = [[ServerRequest alloc] initWithType:@"core.playback.on_end_of_track"];
-    [request start];
-    [request synchronize];
-    if ([request getError]){
-        [self handleError:[request getError]];
-    }
     [self playNext:track];
+    MainVC *mainVC = (MainVC*)[self mainSlideMenu];
+    if (![mainVC isStopped]){
+        ServerRequest* request = [[ServerRequest alloc] initWithType:@"core.playback.stop"];
+        NSArray* parameters = @[[NSNumber numberWithBool:YES]];
+        [request addParameter:@"params" withValue:parameters];
+        [request start];
+        [request synchronize];
+        if ([request getError]){
+            [request handleError:[request getError] withVC:self];
+            return;
+        }
+    }
     ServerRequest* request2 = [[ServerRequest alloc] initWithType:@"core.playback.play"];
     [request2 start];
     [request2 synchronize];
     if ([request2 getError]){
-        [self handleError:[request2 getError]];
+        [request2 handleError:[request2 getError] withVC:self];
+
+        return;
     }
+    mainVC.isStopped = NO;
+    mainVC.isPlaying = YES;
 }
 
 - (void) playNext: (NSDictionary*) track{
+    MainVC *mainVC = (MainVC*)[self mainSlideMenu];
+    NSNumber *position = [NSNumber numberWithBool:!([mainVC isStopped])];
     ServerRequest* request = [[ServerRequest alloc] initWithType:@"core.tracklist.add"];
-    NSArray* parameters = @[@[track],[NSNumber numberWithInt:0]];
+    NSArray* parameters = @[@[track],position];
     [request addParameter:@"params" withValue:parameters];
     [request start];
     [request synchronize];
     if ([request getError]){
-        [self handleError:[request getError]];
+        [request handleError:[request getError] withVC:self];
+        return;
     }
 }
 
@@ -88,7 +114,7 @@
     [request start];
     [request synchronize];
     if ([request getError]){
-        [self handleError:[request getError]];
+        [request handleError:[request getError] withVC:self];
     }
 }
 
@@ -102,26 +128,21 @@
     if (![artistName isEqualToString:@""]){
         [searchQuery setValue:artistName forKey:@"artist"];
     }
-    NSArray* parameters = [NSArray arrayWithObjects:searchQuery, nil];
+    NSArray* parameters = [NSArray arrayWithObjects:searchQuery, @[[self.source stringByAppendingString:@":"]],nil];
     [request addParameter:@"params" withValue:parameters];
     [request start];
     [request synchronize];
     if ([request getError]){
-        [self handleError:[request getError]];
+        [request handleError:[request getError] withVC:self];
     }
     else{
-        trackList = (NSArray*)[[request getResponse] valueForKey:@"tracks"][0];
+        trackList = (NSArray*)[[request getResponse] valueForKey:@"tracks"];
+        if ([trackList count] > 0){
+            trackList = trackList[0];
+            NSLog(@"%@", trackList);
+        }
     }
     return trackList;
-}
-
-- (void) handleError:(NSError*) error {
-    UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:@"Error"
-                                 message:[error description]
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
-    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -178,6 +199,36 @@
     
 }
 
+- (NSUInteger)numberOfSegmentsIn3DSegmentedControl:(RS3DSegmentedControl *)segmentedControl{
+    return 2;
+}
+- (NSString *)titleForSegmentAtIndex:(NSUInteger)segmentIndex segmentedControl:(RS3DSegmentedControl *)segmentedControl{
+    switch (segmentIndex) {
+        case 0:
+            return @"Spotify";
+        case 1:
+            return @"SoundCloud";
+        default:
+            return @"Unknowm";
+    }
+}
+- (void)didSelectSegmentAtIndex:(NSUInteger)segmentIndex segmentedControl:(RS3DSegmentedControl *)segmentedControl{
+    switch (segmentIndex) {
+        case 0:
+            self.source = @"spotify";
+            self.results = [self findTracks:self.song fromArtist:self.artist];
+            [_tableView reloadData];
+            break;
+        case 1:
+            self.source = @"soundcloud";
+            self.results = [self findTracks:self.song fromArtist:self.artist];
+            [_tableView reloadData];
+            break;
+        default:
+            break;
+    }
+    
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

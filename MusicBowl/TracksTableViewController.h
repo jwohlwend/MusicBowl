@@ -8,17 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "ServerRequest.h"
+#import "MainVC.h"
+#import "UIViewController+AMSlideMenu.h"
+#import "RS3DSegmentedControl.h"
 
-@interface TracksTableViewController : UITableViewController
+@interface TracksTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate, RS3DSegmentedControlDelegate>
 {
     NSString* artist;
     NSString* song;
     NSArray* results;
+    NSString* source;
 }
 
 - (NSString*) song;
 - (NSString*) artist;
 - (NSArray*) results;
+- (NSString*) source;
+- (void) setSource: (NSString*) theSource;
 - (void) setSong: (NSString*)songName;
 - (void) setArtist: (NSString*)artistName;
 - (void) setResults: (NSArray*)resultList;
@@ -26,6 +32,7 @@
 - (void) play: (NSDictionary*) track;
 - (void) addToQueue: (NSDictionary*) track;
 - (void) playNext: (NSDictionary*) track;
-- (void) handleError:(NSError*) error;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property RS3DSegmentedControl *segmentedControl;
 
 @end

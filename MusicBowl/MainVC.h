@@ -10,5 +10,18 @@
 #import "ServerRequest.h"
 
 @interface MainVC : AMSlideMenuMainViewController
+{
+    BOOL isPlaying;
+    BOOL isPaused;
+    BOOL isStopped;
+}
+
+- (BOOL) isPlaying;
+- (BOOL) isPaused;
+- (BOOL) isStopped;
+- (void) setIsPlaying:(BOOL) playing;
+- (void) setIsPaused:(BOOL) paused;
+- (void) setIsStopped:(BOOL) stopped;
+
 
 @end

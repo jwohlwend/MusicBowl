@@ -8,13 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "ServerRequest.h"
+#import "UIViewController+AMSlideMenu.h"
+#import "MainVC.h"
 
-@interface QueueTableViewController : UITableViewController
+@interface QueueTableViewController : UITableViewController <UIActionSheetDelegate>
 {
     NSMutableArray* queue;
+    NSMutableArray* oldQueue;
 }
 - (NSMutableArray*) queue;
 - (void) setQueue: (NSMutableArray*) queueList;
+- (NSMutableArray*) oldQueue;
+- (void) setOldQueue: (NSMutableArray*) queueList;
 - (void) refresh;
-- (void) handleError:(NSError*) error;
 @end

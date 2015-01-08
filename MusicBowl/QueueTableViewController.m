@@ -21,9 +21,15 @@
     queue = queueList;
 }
 
+- (NSMutableArray*) oldQueue{
+    return oldQueue;
+}
+- (void) setOldQueue: (NSMutableArray*) queueList{
+    oldQueue = queueList;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self refresh];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -38,34 +44,29 @@
     [sender endRefreshing];
 }
 
+
 -(void) setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];[self.tableView setEditing:editing animated:animated];
     if (!editing) {
         [self updateQueueOnServer];
     }
+    else {
+        self.oldQueue = [self.queue copy];
+    }
 }
 
 - (void) refresh{
     self.queue = [NSMutableArray arrayWithObjects: nil];
-    ServerRequest* request = [[ServerRequest alloc] initWithType:@"core.tracklist.get_tracks"];
+    ServerRequest* request = [[ServerRequest alloc] initWithType:@"core.tracklist.get_tl_tracks"];
     [request start];
     [request synchronize];
     if ([request getError]){
-        [self handleError:[request getError]];
+        [request handleError:[request getError] withVC:self];
     }
     if ([request getResponse]){
         self.queue = [[request getResponse] mutableCopy];
     }
     [self.tableView reloadData];
-}
-
-- (void) handleError:(NSError*) error {
-    UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:@"Error"
-                                 message:[error description]
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
-    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,7 +89,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"track" forIndexPath:indexPath];
-    NSDictionary* track = (NSDictionary*)self.queue[indexPath.row];
+    NSDictionary* track = [self.queue[indexPath.row] valueForKey:@"track"];
     cell.textLabel.text = [track valueForKey:@"name"];
     cell.detailTextLabel.text = [[track valueForKey:@"artists"] valueForKey:@"name"][0];
     
@@ -112,44 +113,56 @@
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     if(buttonIndex == 0){
-        NSLog(@"Remove Button Clicked");
+        self.oldQueue = [self.queue copy];
         [self.queue removeObjectAtIndex:actionSheet.tag];
         [self updateQueueOnServer];
         [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:actionSheet.tag inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
     }
     else if(buttonIndex == 1){
-        NSLog(@"Play next Button Clicked");
         //[self playNow:self.results[actionSheet.tag]];
     }
 }
 
 - (void) updateQueueOnServer {
-    ServerRequest* request = [[ServerRequest alloc] initWithType:@"core.tracklist.clear"];
-    [request start];
-    [request synchronize];
-    if ([request getError]){
-        [self handleError:[request getError]];
-        return;
-    }
-    ServerRequest* request2 = [[ServerRequest alloc] initWithType:@"core.tracklist.add"];
-    NSArray* parameters = @[self.queue];
-    [request2 addParameter:@"params" withValue:parameters];
-    [request2 start];
-    [request2 synchronize];
-    if ([request2 getError]){
-        [self handleError:[request2 getError]];
-    }
-}
 
-
-- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"Done");
-    [self updateQueueOnServer];
+    int length = (int)[self.oldQueue count];
+    if (length > 1){
+        ServerRequest* request1 = [[ServerRequest alloc] initWithType:@"core.tracklist.remove"];
+        NSMutableArray* set = [[NSMutableArray alloc] initWithCapacity:length];
+        for (int i = 0; i < length - 1; i++){
+            set[i] = [NSNumber numberWithInt:[[self.oldQueue[i+1] valueForKey:@"tlid"] intValue]];
+        }
+        NSArray* parameters1 = @[@{@"tlid":set}];
+        NSLog(@"%@",set);
+        [request1 addParameter:@"params" withValue:parameters1];
+        [request1 start];
+        [request1 synchronize];
+        if ([request1 getError]){
+            [request1 handleError:[request1 getError] withVC:self];
+            return;
+        }
+        ServerRequest* request2 = [[ServerRequest alloc] initWithType:@"core.tracklist.add"];
+        NSRange range2 = NSMakeRange(1, [self.queue count] - 1);
+        NSArray* tracksWithID = [self.queue subarrayWithRange:range2];
+        NSMutableArray *tracks = [NSMutableArray arrayWithCapacity:[tracksWithID count]];
+        for (int i = 0; i < [tracksWithID count]; i++){
+            tracks[i] = [tracksWithID[i] valueForKey:@"track"];
+        }
+        [request2 addParameter:@"params" withValue:@[tracks]];
+        [request2 start];
+        [request2 synchronize];
+        if ([request2 getError]){
+            [request2 handleError:[request2 getError] withVC:self];
+        }
+    }
 }
 
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
+    if (indexPath.row == 0){
+        return NO;
+    }
     return YES;
 }
 
@@ -180,6 +193,7 @@
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
+
 
 
 /*

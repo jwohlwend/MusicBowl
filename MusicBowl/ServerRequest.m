@@ -16,7 +16,7 @@
     self = [super init];
     if (self){
         self.type = requestType;
-        self.url = @"http://127.0.0.1:6680/mopidy/rpc";
+        self.url = @"http://192.168.1.50:6680/mopidy/rpc";
         self.parameters = [[NSMutableDictionary alloc] init];
         self.semaphore = dispatch_semaphore_create(0);
     }
@@ -78,7 +78,7 @@
     manager.completionQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     [manager POST:self.url parameters:self.parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.response = (NSDictionary *)responseObject[@"result"];
-        NSLog(@"%@", responseObject);
+        //NSLog(@"%@", responseObject);
         dispatch_semaphore_signal(self.semaphore);
     } failure:^(AFHTTPRequestOperation *operation, NSError*requestError) {
         self.error = requestError;
@@ -96,6 +96,17 @@
 
 - (NSError*) getError{
     return self.error;
+}
+
+
+
+- (void) handleError:(NSError*) theError withVC:(id) vc{
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Error"
+                                 message:[theError localizedFailureReason]
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
+    [vc presentViewController:alert animated:YES completion:nil];
 }
 
 

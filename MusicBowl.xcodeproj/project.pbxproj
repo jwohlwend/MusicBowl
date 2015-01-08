@@ -37,6 +37,9 @@
 		3F37D3261A5B2B5F00ABA169 /* LeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3251A5B2B5F00ABA169 /* LeftMenuTableViewController.m */; };
 		3F37D3291A5B32DA00ABA169 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3281A5B32DA00ABA169 /* MainVC.m */; };
 		3F37D32C1A5B60DC00ABA169 /* QueueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D32B1A5B60DC00ABA169 /* QueueTableViewController.m */; };
+		3F37D33F1A5E143F00ABA169 /* RS3DSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D33E1A5E143F00ABA169 /* RS3DSegmentedControl.m */; };
+		3F37D3431A5E254E00ABA169 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3421A5E254E00ABA169 /* iCarousel.m */; };
+		3F37D3451A5E255F00ABA169 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F37D3441A5E255F00ABA169 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +112,11 @@
 		3F37D3281A5B32DA00ABA169 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
 		3F37D32A1A5B60DC00ABA169 /* QueueTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueTableViewController.h; sourceTree = "<group>"; };
 		3F37D32B1A5B60DC00ABA169 /* QueueTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueTableViewController.m; sourceTree = "<group>"; };
+		3F37D33D1A5E143F00ABA169 /* RS3DSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RS3DSegmentedControl.h; sourceTree = "<group>"; };
+		3F37D33E1A5E143F00ABA169 /* RS3DSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RS3DSegmentedControl.m; sourceTree = "<group>"; };
+		3F37D3411A5E254E00ABA169 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		3F37D3421A5E254E00ABA169 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		3F37D3441A5E255F00ABA169 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F37D3451A5E255F00ABA169 /* QuartzCore.framework in Frameworks */,
 				3F37D2E51A599CEA00ABA169 /* Foundation.framework in Frameworks */,
 				3F37D2E31A599CE200ABA169 /* UIKit.framework in Frameworks */,
 			);
@@ -180,6 +189,7 @@
 				3F37D2E61A59A24A00ABA169 /* API */,
 				3F37D2E41A599CEA00ABA169 /* Foundation.framework */,
 				3F37D2E21A599CE200ABA169 /* UIKit.framework */,
+				3F37D3441A5E255F00ABA169 /* QuartzCore.framework */,
 				3F37D2B51A59924D00ABA169 /* Info.plist */,
 				3F37D2B61A59924D00ABA169 /* main.m */,
 			);
@@ -206,6 +216,8 @@
 		3F37D2E61A59A24A00ABA169 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				3F37D3401A5E254E00ABA169 /* iCarousel */,
+				3F37D33C1A5E143F00ABA169 /* RS3DSegmentedControl */,
 				3F37D30A1A5B29A000ABA169 /* AMSlideMenu */,
 				3F37D2E71A59A24A00ABA169 /* AFNetworking */,
 			);
@@ -258,6 +270,24 @@
 				3F37D3191A5B29A000ABA169 /* UIViewController+AMSlideMenu.m */,
 			);
 			path = AMSlideMenu;
+			sourceTree = "<group>";
+		};
+		3F37D33C1A5E143F00ABA169 /* RS3DSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				3F37D33D1A5E143F00ABA169 /* RS3DSegmentedControl.h */,
+				3F37D33E1A5E143F00ABA169 /* RS3DSegmentedControl.m */,
+			);
+			path = RS3DSegmentedControl;
+			sourceTree = "<group>";
+		};
+		3F37D3401A5E254E00ABA169 /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				3F37D3411A5E254E00ABA169 /* iCarousel.h */,
+				3F37D3421A5E254E00ABA169 /* iCarousel.m */,
+			);
+			path = iCarousel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +395,7 @@
 				3F37D31B1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				3F37D2BA1A59924D00ABA169 /* AppDelegate.m in Sources */,
 				3F37D2FC1A59A24A00ABA169 /* AFHTTPRequestOperationManager.m in Sources */,
+				3F37D3431A5E254E00ABA169 /* iCarousel.m in Sources */,
 				3F37D3091A5B278B00ABA169 /* TracksTableViewController.m in Sources */,
 				3F37D2FE1A59A24A00ABA169 /* AFNetworkReachabilityManager.m in Sources */,
 				3F37D31C1A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.m in Sources */,
@@ -374,6 +405,7 @@
 				3F37D3021A59A24A00ABA169 /* AFURLResponseSerialization.m in Sources */,
 				3F37D3001A59A24A00ABA169 /* AFURLConnectionOperation.m in Sources */,
 				3F37D2FF1A59A24A00ABA169 /* AFSecurityPolicy.m in Sources */,
+				3F37D33F1A5E143F00ABA169 /* RS3DSegmentedControl.m in Sources */,
 				3F37D2FD1A59A24A00ABA169 /* AFHTTPSessionManager.m in Sources */,
 				3F37D31F1A5B29A000ABA169 /* AMSlideMenuRightTableViewController.m in Sources */,
 				3F37D3011A59A24A00ABA169 /* AFURLRequestSerialization.m in Sources */,
@@ -510,6 +542,7 @@
 				INFOPLIST_FILE = MusicBowl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -520,6 +553,7 @@
 				INFOPLIST_FILE = MusicBowl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
