@@ -7,6 +7,7 @@
 //
 
 #import "TracksTableViewController.h"
+#import "RootViewController.h"
 
 @interface TracksTableViewController ()
 
@@ -23,11 +24,11 @@
 - (NSArray*) results{
     return results;
 }
-- (NSString*) source{
-    return source;
+- (NSArray*) sources{
+    return sources;
 }
-- (void) setSource: (NSString*) theSource{
-    source = theSource;
+- (void) setSources: (NSArray*) theSources{
+    sources = theSources;
 }
 - (void) setSong: (NSString*)songName{
     song = songName;
@@ -50,27 +51,55 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.source = @"spotify";
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    self.sources = @[@"soundcloud",@"spotify",@"youtube"];;
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
-    _segmentedControl = [[RS3DSegmentedControl alloc] initWithFrame:CGRectMake(0, _tableView.frame.origin.y + 15, self.view.frame.size.width, 40)];
-    _segmentedControl.delegate = self;
-    [self.view addSubview:_segmentedControl];
+    HMSegmentedControl *segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Souncloud", @"Spotify", @"Youtube"]];
+    segmentedControl.selectionIndicatorHeight = 4.0f;
+    segmentedControl.backgroundColor = [UIColor clearColor];    segmentedControl.textColor = [UIColor whiteColor];
+    segmentedControl.selectedTextColor = [UIColor whiteColor];
+    segmentedControl.selectionIndicatorColor = [UIColor whiteColor];
+    segmentedControl.selectionStyle = HMSegmentedControlSelectionStyleBox;
+    segmentedControl.selectedSegmentIndex = HMSegmentedControlSegmentWidthStyleDynamic;
+    segmentedControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationUp;
+    segmentedControl.shouldAnimateUserSelection = YES;
+    segmentedControl.frame = CGRectMake(15.0, 100.0, self.view.frame.size.width- 30.0, 40);
+    UIView *topBorder = [[UIView alloc] initWithFrame:CGRectMake(15.0, segmentedControl.frame.origin.y - 1.0, self.view.frame.size.width - 30.0, 1.0)];
+    topBorder.backgroundColor = [UIColor whiteColor];
+    UIView *lowBorder = [[UIView alloc] initWithFrame:CGRectMake(15.0, segmentedControl.frame.origin.y + segmentedControl.frame.size.height + 1, self.view.frame.size.width - 30.0, 1.0)];
+    lowBorder.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:topBorder];
+    [self.view addSubview:lowBorder];
     
+    [segmentedControl addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:segmentedControl];
+    CGPoint origin = CGPointMake(0.0, lowBorder.frame.origin.y + 1.0);
+    _tableView.frame = CGRectMake(origin.x, origin.y, self.view.frame.size.width - 15.0, self.view.frame.size.height - origin.y - 40.0);
+    _tableView.backgroundColor = [UIColor clearColor];
     
     // Uncomment the following line to preserve selection between presentations.
-    self.results = [self findTracks:self.song fromArtist:self.artist];
+    self.results = [self findTracks:self.song fromArtist:self.artist fromSource:self.sources[1]];
     [self.tableView reloadData];
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    self.results = [self findTracks:self.song fromArtist:self.artist fromSource:self.sources[1]];
+    [self.tableView reloadData];
+}
+
+- (void) segmentedControlChangedValue:(HMSegmentedControl*)segmentedControl{
+    self.results = [self findTracks:self.song fromArtist:self.artist fromSource:self.sources[segmentedControl.selectedSegmentIndex]];
+    [self.tableView reloadData];
+}
+
 - (void) play: (NSDictionary*) track{
     [self playNext:track];
-    MainVC *mainVC = (MainVC*)[self mainSlideMenu];
-    if (![mainVC isStopped]){
         ServerRequest* request = [[ServerRequest alloc] initWithType:@"core.playback.stop"];
         NSArray* parameters = @[[NSNumber numberWithBool:YES]];
         [request addParameter:@"params" withValue:parameters];
@@ -80,7 +109,6 @@
             [request handleError:[request getError] withVC:self];
             return;
         }
-    }
     ServerRequest* request2 = [[ServerRequest alloc] initWithType:@"core.playback.play"];
     [request2 start];
     [request2 synchronize];
@@ -89,15 +117,11 @@
 
         return;
     }
-    mainVC.isStopped = NO;
-    mainVC.isPlaying = YES;
 }
 
 - (void) playNext: (NSDictionary*) track{
-    MainVC *mainVC = (MainVC*)[self mainSlideMenu];
-    NSNumber *position = [NSNumber numberWithBool:!([mainVC isStopped])];
     ServerRequest* request = [[ServerRequest alloc] initWithType:@"core.tracklist.add"];
-    NSArray* parameters = @[@[track],position];
+    NSArray* parameters = @[@[track]];
     [request addParameter:@"params" withValue:parameters];
     [request start];
     [request synchronize];
@@ -118,7 +142,7 @@
     }
 }
 
-- (NSArray*) findTracks:(NSString *)songName fromArtist:(NSString*) artistName{
+- (NSArray*) findTracks:(NSString *)songName fromArtist:(NSString*) artistName fromSource:(NSString*) source{
     NSArray* trackList = @[];
     ServerRequest* request = [[ServerRequest alloc] initWithType:@"core.library.search"];
     NSMutableDictionary* searchQuery = [[NSMutableDictionary alloc] init];
@@ -128,7 +152,7 @@
     if (![artistName isEqualToString:@""]){
         [searchQuery setValue:artistName forKey:@"artist"];
     }
-    NSArray* parameters = [NSArray arrayWithObjects:searchQuery, @[[self.source stringByAppendingString:@":"]],nil];
+    NSArray* parameters = [NSArray arrayWithObjects:searchQuery, @[[source stringByAppendingString:@":"]],nil];
     [request addParameter:@"params" withValue:parameters];
     [request start];
     [request synchronize];
@@ -168,6 +192,9 @@
     NSDictionary* track = (NSDictionary*)self.results[indexPath.row];
     cell.textLabel.text = [track valueForKey:@"name"];
     cell.detailTextLabel.text = [[track valueForKey:@"artists"] valueForKey:@"name"][0];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor clearColor];
     
     // Configure the cell...
     
@@ -199,36 +226,11 @@
     
 }
 
-- (NSUInteger)numberOfSegmentsIn3DSegmentedControl:(RS3DSegmentedControl *)segmentedControl{
-    return 2;
+- (IBAction)back:(id)sender {
+    [self.root goToPageWithIdentifier:@"Search" withInfo:nil];
 }
-- (NSString *)titleForSegmentAtIndex:(NSUInteger)segmentIndex segmentedControl:(RS3DSegmentedControl *)segmentedControl{
-    switch (segmentIndex) {
-        case 0:
-            return @"Spotify";
-        case 1:
-            return @"SoundCloud";
-        default:
-            return @"Unknowm";
-    }
-}
-- (void)didSelectSegmentAtIndex:(NSUInteger)segmentIndex segmentedControl:(RS3DSegmentedControl *)segmentedControl{
-    switch (segmentIndex) {
-        case 0:
-            self.source = @"spotify";
-            self.results = [self findTracks:self.song fromArtist:self.artist];
-            [_tableView reloadData];
-            break;
-        case 1:
-            self.source = @"soundcloud";
-            self.results = [self findTracks:self.song fromArtist:self.artist];
-            [_tableView reloadData];
-            break;
-        default:
-            break;
-    }
     
-}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -27,19 +27,28 @@
 		3F37D3031A59A24A00ABA169 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D2FA1A59A24A00ABA169 /* AFURLSessionManager.m */; };
 		3F37D3061A59A27500ABA169 /* ServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3051A59A27500ABA169 /* ServerRequest.m */; };
 		3F37D3091A5B278B00ABA169 /* TracksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3081A5B278B00ABA169 /* TracksTableViewController.m */; };
-		3F37D31A1A5B29A000ABA169 /* AMSlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D30C1A5B29A000ABA169 /* AMSlideMenuContentSegue.m */; };
-		3F37D31B1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D30E1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.m */; };
-		3F37D31C1A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3101A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.m */; };
-		3F37D31D1A5B29A000ABA169 /* AMSlideMenuMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3121A5B29A000ABA169 /* AMSlideMenuMainViewController.m */; };
-		3F37D31E1A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3151A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.m */; };
-		3F37D31F1A5B29A000ABA169 /* AMSlideMenuRightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3171A5B29A000ABA169 /* AMSlideMenuRightTableViewController.m */; };
-		3F37D3201A5B29A000ABA169 /* UIViewController+AMSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3191A5B29A000ABA169 /* UIViewController+AMSlideMenu.m */; };
-		3F37D3261A5B2B5F00ABA169 /* LeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3251A5B2B5F00ABA169 /* LeftMenuTableViewController.m */; };
-		3F37D3291A5B32DA00ABA169 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3281A5B32DA00ABA169 /* MainVC.m */; };
 		3F37D32C1A5B60DC00ABA169 /* QueueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D32B1A5B60DC00ABA169 /* QueueTableViewController.m */; };
-		3F37D33F1A5E143F00ABA169 /* RS3DSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D33E1A5E143F00ABA169 /* RS3DSegmentedControl.m */; };
-		3F37D3431A5E254E00ABA169 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3421A5E254E00ABA169 /* iCarousel.m */; };
 		3F37D3451A5E255F00ABA169 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F37D3441A5E255F00ABA169 /* QuartzCore.framework */; };
+		3F37D3491A5ECE4D00ABA169 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3481A5ECE4D00ABA169 /* HMSegmentedControl.m */; };
+		3F37D34C1A5EDD4D00ABA169 /* music-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F37D34B1A5EDD4D00ABA169 /* music-wallpaper.jpg */; };
+		3F37D34F1A5EDDF200ABA169 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D34E1A5EDDF200ABA169 /* SearchViewController.m */; };
+		3F37D3601A5EF3D100ABA169 /* Black_and_white_on_transparent_background_282x75.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F37D35A1A5EF3D100ABA169 /* Black_and_white_on_transparent_background_282x75.png */; };
+		3F37D3611A5EF3D100ABA169 /* Original_on_invert_emblems_color_background_282x75.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F37D35B1A5EF3D100ABA169 /* Original_on_invert_emblems_color_background_282x75.png */; };
+		3F37D3621A5EF3D100ABA169 /* Original_transparent_282x75.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F37D35C1A5EF3D100ABA169 /* Original_transparent_282x75.png */; };
+		3F37D3631A5EF3D100ABA169 /* Original_without_effects_on_transparent_background_282x75.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F37D35D1A5EF3D100ABA169 /* Original_without_effects_on_transparent_background_282x75.png */; };
+		3F37D3641A5EF3D100ABA169 /* White_on_black_background_282x75.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F37D35E1A5EF3D100ABA169 /* White_on_black_background_282x75.png */; };
+		3F37D3651A5EF3D100ABA169 /* White_on_emblems_color_background_282x75.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F37D35F1A5EF3D100ABA169 /* White_on_emblems_color_background_282x75.png */; };
+		3F37D36B1A5F054B00ABA169 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F37D36A1A5F054B00ABA169 /* Accelerate.framework */; };
+		3F37D3711A5F107300ABA169 /* btSimpleMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D36E1A5F107300ABA169 /* btSimpleMenuItem.m */; };
+		3F37D3721A5F107300ABA169 /* btSimpleSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3701A5F107300ABA169 /* btSimpleSideMenu.m */; };
+		3F37D38D1A5F3C0900ABA169 /* BlurMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3881A5F3C0900ABA169 /* BlurMenu.m */; };
+		3F37D38E1A5F3C0900ABA169 /* BlurMenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D38A1A5F3C0900ABA169 /* BlurMenuItemCell.m */; };
+		3F37D38F1A5F3C0900ABA169 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D38C1A5F3C0900ABA169 /* UIImage+ImageEffects.m */; };
+		3F37D3911A5F40C100ABA169 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F37D3901A5F40C100ABA169 /* menu.png */; };
+		3F37D3931A5F422900ABA169 /* note_music-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F37D3921A5F422900ABA169 /* note_music-50.png */; };
+		3F37D3961A5F574200ABA169 /* QueueContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3951A5F574200ABA169 /* QueueContainerViewController.m */; };
+		3F37D3991A5F5AD100ABA169 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D3981A5F5AD100ABA169 /* RootViewController.m */; };
+		3F37D39C1A5F6B4800ABA169 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F37D39B1A5F6B4800ABA169 /* ContentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,32 +100,39 @@
 		3F37D3051A59A27500ABA169 /* ServerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerRequest.m; path = MusicBowl/ServerRequest.m; sourceTree = SOURCE_ROOT; };
 		3F37D3071A5B278B00ABA169 /* TracksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TracksTableViewController.h; sourceTree = "<group>"; };
 		3F37D3081A5B278B00ABA169 /* TracksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TracksTableViewController.m; sourceTree = "<group>"; };
-		3F37D30B1A5B29A000ABA169 /* AMSlideMenuContentSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuContentSegue.h; sourceTree = "<group>"; };
-		3F37D30C1A5B29A000ABA169 /* AMSlideMenuContentSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuContentSegue.m; sourceTree = "<group>"; };
-		3F37D30D1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuLeftMenuSegue.h; sourceTree = "<group>"; };
-		3F37D30E1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuLeftMenuSegue.m; sourceTree = "<group>"; };
-		3F37D30F1A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuLeftTableViewController.h; sourceTree = "<group>"; };
-		3F37D3101A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuLeftTableViewController.m; sourceTree = "<group>"; };
-		3F37D3111A5B29A000ABA169 /* AMSlideMenuMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuMainViewController.h; sourceTree = "<group>"; };
-		3F37D3121A5B29A000ABA169 /* AMSlideMenuMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuMainViewController.m; sourceTree = "<group>"; };
-		3F37D3131A5B29A000ABA169 /* AMSlideMenuProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuProtocols.h; sourceTree = "<group>"; };
-		3F37D3141A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuRightMenuSegue.h; sourceTree = "<group>"; };
-		3F37D3151A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuRightMenuSegue.m; sourceTree = "<group>"; };
-		3F37D3161A5B29A000ABA169 /* AMSlideMenuRightTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuRightTableViewController.h; sourceTree = "<group>"; };
-		3F37D3171A5B29A000ABA169 /* AMSlideMenuRightTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuRightTableViewController.m; sourceTree = "<group>"; };
-		3F37D3181A5B29A000ABA169 /* UIViewController+AMSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AMSlideMenu.h"; sourceTree = "<group>"; };
-		3F37D3191A5B29A000ABA169 /* UIViewController+AMSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AMSlideMenu.m"; sourceTree = "<group>"; };
-		3F37D3241A5B2B5F00ABA169 /* LeftMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuTableViewController.h; sourceTree = "<group>"; };
-		3F37D3251A5B2B5F00ABA169 /* LeftMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuTableViewController.m; sourceTree = "<group>"; };
-		3F37D3271A5B32DA00ABA169 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
-		3F37D3281A5B32DA00ABA169 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
 		3F37D32A1A5B60DC00ABA169 /* QueueTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueTableViewController.h; sourceTree = "<group>"; };
 		3F37D32B1A5B60DC00ABA169 /* QueueTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueTableViewController.m; sourceTree = "<group>"; };
-		3F37D33D1A5E143F00ABA169 /* RS3DSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RS3DSegmentedControl.h; sourceTree = "<group>"; };
-		3F37D33E1A5E143F00ABA169 /* RS3DSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RS3DSegmentedControl.m; sourceTree = "<group>"; };
-		3F37D3411A5E254E00ABA169 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
-		3F37D3421A5E254E00ABA169 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		3F37D3441A5E255F00ABA169 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3F37D3471A5ECE4D00ABA169 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		3F37D3481A5ECE4D00ABA169 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
+		3F37D34B1A5EDD4D00ABA169 /* music-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "music-wallpaper.jpg"; sourceTree = "<group>"; };
+		3F37D34D1A5EDDF200ABA169 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		3F37D34E1A5EDDF200ABA169 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		3F37D35A1A5EF3D100ABA169 /* Black_and_white_on_transparent_background_282x75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black_and_white_on_transparent_background_282x75.png; sourceTree = "<group>"; };
+		3F37D35B1A5EF3D100ABA169 /* Original_on_invert_emblems_color_background_282x75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Original_on_invert_emblems_color_background_282x75.png; sourceTree = "<group>"; };
+		3F37D35C1A5EF3D100ABA169 /* Original_transparent_282x75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Original_transparent_282x75.png; sourceTree = "<group>"; };
+		3F37D35D1A5EF3D100ABA169 /* Original_without_effects_on_transparent_background_282x75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Original_without_effects_on_transparent_background_282x75.png; sourceTree = "<group>"; };
+		3F37D35E1A5EF3D100ABA169 /* White_on_black_background_282x75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White_on_black_background_282x75.png; sourceTree = "<group>"; };
+		3F37D35F1A5EF3D100ABA169 /* White_on_emblems_color_background_282x75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White_on_emblems_color_background_282x75.png; sourceTree = "<group>"; };
+		3F37D36A1A5F054B00ABA169 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		3F37D36D1A5F107300ABA169 /* btSimpleMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btSimpleMenuItem.h; sourceTree = "<group>"; };
+		3F37D36E1A5F107300ABA169 /* btSimpleMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = btSimpleMenuItem.m; sourceTree = "<group>"; };
+		3F37D36F1A5F107300ABA169 /* btSimpleSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btSimpleSideMenu.h; sourceTree = "<group>"; };
+		3F37D3701A5F107300ABA169 /* btSimpleSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = btSimpleSideMenu.m; sourceTree = "<group>"; };
+		3F37D3871A5F3C0900ABA169 /* BlurMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurMenu.h; sourceTree = "<group>"; };
+		3F37D3881A5F3C0900ABA169 /* BlurMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurMenu.m; sourceTree = "<group>"; };
+		3F37D3891A5F3C0900ABA169 /* BlurMenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurMenuItemCell.h; sourceTree = "<group>"; };
+		3F37D38A1A5F3C0900ABA169 /* BlurMenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurMenuItemCell.m; sourceTree = "<group>"; };
+		3F37D38B1A5F3C0900ABA169 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		3F37D38C1A5F3C0900ABA169 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		3F37D3901A5F40C100ABA169 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		3F37D3921A5F422900ABA169 /* note_music-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "note_music-50.png"; sourceTree = "<group>"; };
+		3F37D3941A5F574200ABA169 /* QueueContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueContainerViewController.h; sourceTree = "<group>"; };
+		3F37D3951A5F574200ABA169 /* QueueContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueContainerViewController.m; sourceTree = "<group>"; };
+		3F37D3971A5F5AD100ABA169 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		3F37D3981A5F5AD100ABA169 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		3F37D39A1A5F6B4800ABA169 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		3F37D39B1A5F6B4800ABA169 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F37D36B1A5F054B00ABA169 /* Accelerate.framework in Frameworks */,
 				3F37D3451A5E255F00ABA169 /* QuartzCore.framework in Frameworks */,
 				3F37D2E51A599CEA00ABA169 /* Foundation.framework in Frameworks */,
 				3F37D2E31A599CE200ABA169 /* UIKit.framework in Frameworks */,
@@ -161,19 +178,23 @@
 		3F37D2B31A59924D00ABA169 /* MusicBowl */ = {
 			isa = PBXGroup;
 			children = (
-				3F37D3271A5B32DA00ABA169 /* MainVC.h */,
-				3F37D3281A5B32DA00ABA169 /* MainVC.m */,
 				3F37D2B81A59924D00ABA169 /* AppDelegate.h */,
 				3F37D2B91A59924D00ABA169 /* AppDelegate.m */,
 				3F37D2BE1A59924D00ABA169 /* Main.storyboard */,
-				3F37D3241A5B2B5F00ABA169 /* LeftMenuTableViewController.h */,
-				3F37D3251A5B2B5F00ABA169 /* LeftMenuTableViewController.m */,
+				3F37D3971A5F5AD100ABA169 /* RootViewController.h */,
+				3F37D3981A5F5AD100ABA169 /* RootViewController.m */,
+				3F37D39A1A5F6B4800ABA169 /* ContentViewController.h */,
+				3F37D39B1A5F6B4800ABA169 /* ContentViewController.m */,
+				3F37D3941A5F574200ABA169 /* QueueContainerViewController.h */,
+				3F37D3951A5F574200ABA169 /* QueueContainerViewController.m */,
 				3F37D3071A5B278B00ABA169 /* TracksTableViewController.h */,
 				3F37D3081A5B278B00ABA169 /* TracksTableViewController.m */,
 				3F37D32A1A5B60DC00ABA169 /* QueueTableViewController.h */,
 				3F37D32B1A5B60DC00ABA169 /* QueueTableViewController.m */,
 				3F37D2DF1A599CCA00ABA169 /* PlayerViewController.h */,
 				3F37D2E01A599CCA00ABA169 /* PlayerViewController.m */,
+				3F37D34D1A5EDDF200ABA169 /* SearchViewController.h */,
+				3F37D34E1A5EDDF200ABA169 /* SearchViewController.m */,
 				3F37D3041A59A27500ABA169 /* ServerRequest.h */,
 				3F37D3051A59A27500ABA169 /* ServerRequest.m */,
 				3F37D2C11A59924D00ABA169 /* Images.xcassets */,
@@ -186,8 +207,10 @@
 		3F37D2B41A59924D00ABA169 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3F37D34A1A5EDD4D00ABA169 /* Images */,
 				3F37D2E61A59A24A00ABA169 /* API */,
 				3F37D2E41A599CEA00ABA169 /* Foundation.framework */,
+				3F37D36A1A5F054B00ABA169 /* Accelerate.framework */,
 				3F37D2E21A599CE200ABA169 /* UIKit.framework */,
 				3F37D3441A5E255F00ABA169 /* QuartzCore.framework */,
 				3F37D2B51A59924D00ABA169 /* Info.plist */,
@@ -216,9 +239,9 @@
 		3F37D2E61A59A24A00ABA169 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				3F37D3401A5E254E00ABA169 /* iCarousel */,
-				3F37D33C1A5E143F00ABA169 /* RS3DSegmentedControl */,
-				3F37D30A1A5B29A000ABA169 /* AMSlideMenu */,
+				3F37D3861A5F3C0900ABA169 /* BlurEffect */,
+				3F37D36C1A5F107300ABA169 /* btSimpleSideMenu */,
+				3F37D3461A5ECE4D00ABA169 /* HMSegmentedControl */,
 				3F37D2E71A59A24A00ABA169 /* AFNetworking */,
 			);
 			path = API;
@@ -250,45 +273,55 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		3F37D30A1A5B29A000ABA169 /* AMSlideMenu */ = {
+		3F37D3461A5ECE4D00ABA169 /* HMSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
-				3F37D30B1A5B29A000ABA169 /* AMSlideMenuContentSegue.h */,
-				3F37D30C1A5B29A000ABA169 /* AMSlideMenuContentSegue.m */,
-				3F37D30D1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.h */,
-				3F37D30E1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.m */,
-				3F37D30F1A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.h */,
-				3F37D3101A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.m */,
-				3F37D3111A5B29A000ABA169 /* AMSlideMenuMainViewController.h */,
-				3F37D3121A5B29A000ABA169 /* AMSlideMenuMainViewController.m */,
-				3F37D3131A5B29A000ABA169 /* AMSlideMenuProtocols.h */,
-				3F37D3141A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.h */,
-				3F37D3151A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.m */,
-				3F37D3161A5B29A000ABA169 /* AMSlideMenuRightTableViewController.h */,
-				3F37D3171A5B29A000ABA169 /* AMSlideMenuRightTableViewController.m */,
-				3F37D3181A5B29A000ABA169 /* UIViewController+AMSlideMenu.h */,
-				3F37D3191A5B29A000ABA169 /* UIViewController+AMSlideMenu.m */,
+				3F37D3471A5ECE4D00ABA169 /* HMSegmentedControl.h */,
+				3F37D3481A5ECE4D00ABA169 /* HMSegmentedControl.m */,
 			);
-			path = AMSlideMenu;
+			path = HMSegmentedControl;
 			sourceTree = "<group>";
 		};
-		3F37D33C1A5E143F00ABA169 /* RS3DSegmentedControl */ = {
+		3F37D34A1A5EDD4D00ABA169 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				3F37D33D1A5E143F00ABA169 /* RS3DSegmentedControl.h */,
-				3F37D33E1A5E143F00ABA169 /* RS3DSegmentedControl.m */,
+				3F37D3921A5F422900ABA169 /* note_music-50.png */,
+				3F37D3901A5F40C100ABA169 /* menu.png */,
+				3F37D35A1A5EF3D100ABA169 /* Black_and_white_on_transparent_background_282x75.png */,
+				3F37D35B1A5EF3D100ABA169 /* Original_on_invert_emblems_color_background_282x75.png */,
+				3F37D35C1A5EF3D100ABA169 /* Original_transparent_282x75.png */,
+				3F37D35D1A5EF3D100ABA169 /* Original_without_effects_on_transparent_background_282x75.png */,
+				3F37D35E1A5EF3D100ABA169 /* White_on_black_background_282x75.png */,
+				3F37D35F1A5EF3D100ABA169 /* White_on_emblems_color_background_282x75.png */,
+				3F37D34B1A5EDD4D00ABA169 /* music-wallpaper.jpg */,
 			);
-			path = RS3DSegmentedControl;
+			path = Images;
 			sourceTree = "<group>";
 		};
-		3F37D3401A5E254E00ABA169 /* iCarousel */ = {
+		3F37D36C1A5F107300ABA169 /* btSimpleSideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				3F37D3411A5E254E00ABA169 /* iCarousel.h */,
-				3F37D3421A5E254E00ABA169 /* iCarousel.m */,
+				3F37D36D1A5F107300ABA169 /* btSimpleMenuItem.h */,
+				3F37D36E1A5F107300ABA169 /* btSimpleMenuItem.m */,
+				3F37D36F1A5F107300ABA169 /* btSimpleSideMenu.h */,
+				3F37D3701A5F107300ABA169 /* btSimpleSideMenu.m */,
 			);
-			path = iCarousel;
+			path = btSimpleSideMenu;
 			sourceTree = "<group>";
+		};
+		3F37D3861A5F3C0900ABA169 /* BlurEffect */ = {
+			isa = PBXGroup;
+			children = (
+				3F37D3871A5F3C0900ABA169 /* BlurMenu.h */,
+				3F37D3881A5F3C0900ABA169 /* BlurMenu.m */,
+				3F37D3891A5F3C0900ABA169 /* BlurMenuItemCell.h */,
+				3F37D38A1A5F3C0900ABA169 /* BlurMenuItemCell.m */,
+				3F37D38B1A5F3C0900ABA169 /* UIImage+ImageEffects.h */,
+				3F37D38C1A5F3C0900ABA169 /* UIImage+ImageEffects.m */,
+			);
+			name = BlurEffect;
+			path = MusicBowl/API/BlurEffect;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -370,8 +403,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F37D3651A5EF3D100ABA169 /* White_on_emblems_color_background_282x75.png in Resources */,
+				3F37D3621A5EF3D100ABA169 /* Original_transparent_282x75.png in Resources */,
+				3F37D3601A5EF3D100ABA169 /* Black_and_white_on_transparent_background_282x75.png in Resources */,
+				3F37D3631A5EF3D100ABA169 /* Original_without_effects_on_transparent_background_282x75.png in Resources */,
+				3F37D3931A5F422900ABA169 /* note_music-50.png in Resources */,
+				3F37D34C1A5EDD4D00ABA169 /* music-wallpaper.jpg in Resources */,
 				3F37D2C01A59924D00ABA169 /* Main.storyboard in Resources */,
+				3F37D3611A5EF3D100ABA169 /* Original_on_invert_emblems_color_background_282x75.png in Resources */,
 				3F37D2C51A59924D00ABA169 /* LaunchScreen.xib in Resources */,
+				3F37D3911A5F40C100ABA169 /* menu.png in Resources */,
+				3F37D3641A5EF3D100ABA169 /* White_on_black_background_282x75.png in Resources */,
 				3F37D2C21A59924D00ABA169 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,32 +432,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F37D31A1A5B29A000ABA169 /* AMSlideMenuContentSegue.m in Sources */,
 				3F37D2FB1A59A24A00ABA169 /* AFHTTPRequestOperation.m in Sources */,
-				3F37D31B1A5B29A000ABA169 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				3F37D2BA1A59924D00ABA169 /* AppDelegate.m in Sources */,
+				3F37D3991A5F5AD100ABA169 /* RootViewController.m in Sources */,
+				3F37D38E1A5F3C0900ABA169 /* BlurMenuItemCell.m in Sources */,
+				3F37D3491A5ECE4D00ABA169 /* HMSegmentedControl.m in Sources */,
+				3F37D38F1A5F3C0900ABA169 /* UIImage+ImageEffects.m in Sources */,
 				3F37D2FC1A59A24A00ABA169 /* AFHTTPRequestOperationManager.m in Sources */,
-				3F37D3431A5E254E00ABA169 /* iCarousel.m in Sources */,
 				3F37D3091A5B278B00ABA169 /* TracksTableViewController.m in Sources */,
 				3F37D2FE1A59A24A00ABA169 /* AFNetworkReachabilityManager.m in Sources */,
-				3F37D31C1A5B29A000ABA169 /* AMSlideMenuLeftTableViewController.m in Sources */,
 				3F37D3061A59A27500ABA169 /* ServerRequest.m in Sources */,
+				3F37D3961A5F574200ABA169 /* QueueContainerViewController.m in Sources */,
+				3F37D38D1A5F3C0900ABA169 /* BlurMenu.m in Sources */,
 				3F37D32C1A5B60DC00ABA169 /* QueueTableViewController.m in Sources */,
-				3F37D3201A5B29A000ABA169 /* UIViewController+AMSlideMenu.m in Sources */,
 				3F37D3021A59A24A00ABA169 /* AFURLResponseSerialization.m in Sources */,
+				3F37D3711A5F107300ABA169 /* btSimpleMenuItem.m in Sources */,
 				3F37D3001A59A24A00ABA169 /* AFURLConnectionOperation.m in Sources */,
+				3F37D34F1A5EDDF200ABA169 /* SearchViewController.m in Sources */,
 				3F37D2FF1A59A24A00ABA169 /* AFSecurityPolicy.m in Sources */,
-				3F37D33F1A5E143F00ABA169 /* RS3DSegmentedControl.m in Sources */,
 				3F37D2FD1A59A24A00ABA169 /* AFHTTPSessionManager.m in Sources */,
-				3F37D31F1A5B29A000ABA169 /* AMSlideMenuRightTableViewController.m in Sources */,
 				3F37D3011A59A24A00ABA169 /* AFURLRequestSerialization.m in Sources */,
 				3F37D3031A59A24A00ABA169 /* AFURLSessionManager.m in Sources */,
+				3F37D39C1A5F6B4800ABA169 /* ContentViewController.m in Sources */,
+				3F37D3721A5F107300ABA169 /* btSimpleSideMenu.m in Sources */,
 				3F37D2B71A59924D00ABA169 /* main.m in Sources */,
-				3F37D31D1A5B29A000ABA169 /* AMSlideMenuMainViewController.m in Sources */,
 				3F37D2E11A599CCA00ABA169 /* PlayerViewController.m in Sources */,
-				3F37D3291A5B32DA00ABA169 /* MainVC.m in Sources */,
-				3F37D31E1A5B29A000ABA169 /* AMSlideMenuRightMenuSegue.m in Sources */,
-				3F37D3261A5B2B5F00ABA169 /* LeftMenuTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

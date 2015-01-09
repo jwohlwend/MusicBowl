@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "ServerRequest.h"
-#import "UIViewController+AMSlideMenu.h"
-#import "MainVC.h"
 
 @interface QueueTableViewController : UITableViewController <UIActionSheetDelegate>
 {

@@ -25,11 +25,15 @@
     return oldQueue;
 }
 - (void) setOldQueue: (NSMutableArray*) queueList{
-    oldQueue = queueList;
+    oldQueue = queueList; 
 }
-
+- (void) viewWillAppear:(BOOL)animated {
+    [self refresh];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
     [self refresh];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -92,6 +96,9 @@
     NSDictionary* track = [self.queue[indexPath.row] valueForKey:@"track"];
     cell.textLabel.text = [track valueForKey:@"name"];
     cell.detailTextLabel.text = [[track valueForKey:@"artists"] valueForKey:@"name"][0];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor clearColor];
     
     // Configure the cell...
     
