@@ -27,6 +27,12 @@
 - (NSArray*) sources{
     return sources;
 }
+- (HMSegmentedControl*) segmentedControl{
+    return segmentedControl;
+}
+- (void) setSegmentedControl: (HMSegmentedControl*) theSegment{
+    segmentedControl = theSegment;
+}
 - (void) setSources: (NSArray*) theSources{
     sources = theSources;
 }
@@ -57,7 +63,7 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
-    HMSegmentedControl *segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Souncloud", @"Spotify", @"Youtube"]];
+    segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Souncloud", @"Spotify", @"Youtube"]];
     segmentedControl.selectionIndicatorHeight = 4.0f;
     segmentedControl.backgroundColor = [UIColor clearColor];    segmentedControl.textColor = [UIColor whiteColor];
     segmentedControl.selectedTextColor = [UIColor whiteColor];
@@ -89,6 +95,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated{
+    segmentedControl.selectedSegmentIndex = 1;
     self.results = [self findTracks:self.song fromArtist:self.artist fromSource:self.sources[1]];
     [self.tableView reloadData];
 }

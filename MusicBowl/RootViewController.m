@@ -68,7 +68,6 @@
 }
 
 - (void) goToPageWithIdentifier:(NSString*) identifier withInfo:(NSDictionary*) info{
-    NSLog(@"passes 1");
     ContentViewController* startingViewController;
     UIPageViewControllerNavigationDirection direction;
     if([identifier isEqualToString:@"Results"]){
@@ -81,7 +80,6 @@
     else if([identifier isEqualToString:@"Search"]){
         direction = UIPageViewControllerNavigationDirectionReverse;
         startingViewController = (ContentViewController*)[self viewControllerAtIndex:(int)[self indexOfViewControllerWithIdentifier:identifier] storyboard:self.storyboard];
-        NSLog(@"passes 2");
     }
     else{
         direction = UIPageViewControllerNavigationDirectionForward;

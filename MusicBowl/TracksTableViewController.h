@@ -18,12 +18,15 @@
     NSString* song;
     NSArray* results;
     NSArray* sources;
+    HMSegmentedControl *segmentedControl;
 }
 
 - (NSString*) song;
 - (NSString*) artist;
 - (NSArray*) results;
 - (NSArray*) sources;
+- (HMSegmentedControl*) segmentedControl;
+- (void) setSegmentedControl: (HMSegmentedControl*) theSegment;
 - (void) setSources: (NSArray*) theSources;
 - (void) setSong: (NSString*)songName;
 - (void) setArtist: (NSString*)artistName;
